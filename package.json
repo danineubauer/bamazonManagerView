@@ -1,0 +1,23 @@
+{
+  "name": "bamazonmanagerview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "managerView.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danineubauer/bamazonManagerView.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danineubauer/bamazonManagerView/issues"
+  },
+  "homepage": "https://github.com/danineubauer/bamazonManagerView#readme",
+  "dependencies": {
+    "inquirer": "^7.0.1",
+    "mysql": "^2.17.1"
+  }
+}
