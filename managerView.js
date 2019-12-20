@@ -32,12 +32,16 @@ function start() {
         ])
         .then(function(answer) { 
             if (answer.menuChoice === 'View Products for Sale') {
+                console.log('Showing all products: ')
                 showProducts(); 
             } else if (answer.menuChoice === 'View Low Inventory') {
+                console.log('Showing all items which have more than 5 in stock: ')
                 showLowInventory();
-            } else if (answer.menuChoice === 'Add to Inventory') { 
+            } else if (answer.menuChoice === 'Add to Inventory') {
+                console.log('Adding another item to those already in stock: ') 
                 addInventory(); 
             } else if (answer.menuChoice === 'Add New Product') {
+                console.log('Adding an new item to stock: ')
                 addNewProduct(); 
             }
         })
@@ -45,6 +49,7 @@ function start() {
 
 const showProducts() {
     //show all products: 
+    connection.query
 }
 
 const showLowInventory() { 
