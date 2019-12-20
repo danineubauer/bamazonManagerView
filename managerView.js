@@ -15,12 +15,12 @@ connection.connect(function(err) {
     if(err) throw err;
     console.log('connection as id ' + connection.threadId); 
     // connection.query('SELECT * FROM products')....
-    allowInquirer(); 
+    start(); 
 })
 
 //build inquirer: 
 
-const allowInquirer = function() { 
+function start() { 
     inquirer
         .prompt ([
             {
@@ -30,5 +30,31 @@ const allowInquirer = function() {
                 name: 'menuChoice'
             }
         ])
-        .then
+        .then(function(answer) { 
+            if (answer.menuChoice === 'View Products for Sale') {
+                showProducts(); 
+            } else if (answer.menuChoice === 'View Low Inventory') {
+                showLowInventory();
+            } else if (answer.menuChoice === 'Add to Inventory') { 
+                addInventory(); 
+            } else if (answer.menuChoice === 'Add New Product') {
+                addNewProduct(); 
+            }
+        })
+}
+
+const showProducts() {
+    //show all products: 
+}
+
+const showLowInventory() { 
+    //show all items with a lower stock quantity than 5:
+}
+
+const addInventory() { 
+    //add more of any item already in store:
+}
+
+const addNewProduct() { 
+    //add a new product:
 }
